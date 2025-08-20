@@ -1,5 +1,4 @@
 scoreboard players remove @s julliapi.timerRepeat 1
-$scoreboard players set @s timerTicks $(ticks)
+tag @s remove julliapi.timer.touched
 
-
-tag @s add julliapi.touched
+tellraw @a {"score":{"name":"@s","objective":"julliapi.timerRepeat"}}
