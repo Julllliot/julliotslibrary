@@ -1,8 +1,8 @@
 execute if score dummy julliapi.setobjQuantity matches 0 run return run function julliot:setobj/object with storage julliapi:setobj
 
-$data modify storage julli:setobj x set from storage julli:setobj xyz[$(index0)]
-$data modify storage julli:setobj y set from storage julli:setobj xyz[$(index1)]
-$data modify storage julli:setobj z set from storage julli:setobj xyz[$(index2)]
+$data modify storage julliapi:setobj x set from storage julliapi:setobj xyz[$(index0)]
+$data modify storage julliapi:setobj y set from storage julliapi:setobj xyz[$(index1)]
+$data modify storage julliapi:setobj z set from storage julliapi:setobj xyz[$(index2)]
 
 function julliot:setobj/marker with storage julliapi:setobj
 
