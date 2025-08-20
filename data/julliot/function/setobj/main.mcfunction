@@ -1,23 +1,23 @@
-execute if score dummy setobjQuantity matches 0 run return run function julliot:setobj/object with storage julli:setobj
+execute if score dummy julliapi.setobjQuantity matches 0 run return run function julliot:setobj/object with storage julliapi:setobj
 
 $data modify storage julli:setobj x set from storage julli:setobj xyz[$(index0)]
 $data modify storage julli:setobj y set from storage julli:setobj xyz[$(index1)]
 $data modify storage julli:setobj z set from storage julli:setobj xyz[$(index2)]
 
-function julliot:setobj/marker with storage julli:setobj
+function julliot:setobj/marker with storage julliapi:setobj
 
-scoreboard players remove dummy setobjQuantity 1
+scoreboard players remove dummy julliapi.setobjQuantity 1
 
-execute store result score dummy setobjX run data get storage julli:setobj index0
-execute store result score dummy setobjY run data get storage julli:setobj index1
-execute store result score dummy setobjZ run data get storage julli:setobj index2
+execute store result score dummy julliapi.setobjX run data get storage julliapi:setobj index0
+execute store result score dummy julliapi.setobjY run data get storage julliapi:setobj index1
+execute store result score dummy julliapi.setobjZ run data get storage julliapi:setobj index2
 
-scoreboard players add dummy setobjX 3
-scoreboard players add dummy setobjY 3
-scoreboard players add dummy setobjZ 3
+scoreboard players add dummy julliapi.setobjX 3
+scoreboard players add dummy julliapi.setobjY 3
+scoreboard players add dummy julliapi.setobjZ 3
 
-execute store result storage julli:setobj index0 int 1 run scoreboard players get dummy setobjX
-execute store result storage julli:setobj index1 int 1 run scoreboard players get dummy setobjY
-execute store result storage julli:setobj index2 int 1 run scoreboard players get dummy setobjZ
+execute store result storage julliapi:setobj index0 int 1 run scoreboard players get dummy julliapi.setobjX
+execute store result storage julliapi:setobj index1 int 1 run scoreboard players get dummy julliapi.setobjY
+execute store result storage julliapi:setobj index2 int 1 run scoreboard players get dummy julliapi.setobjZ
 
-function julliot:setobj/main with storage julli:setobj
+function julliot:setobj/main with storage julliapi:setobj

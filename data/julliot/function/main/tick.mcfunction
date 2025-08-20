@@ -1,3 +1,2 @@
-execute as @e[type=marker,tag=candle] at @s if block ~ ~ ~ candle[lit=true] run function julliot:timer/main with storage julli:timer
-
-#aofmpafns
+execute as @e[type=marker,tag=candle,tag=!julliapi.touched] at @s if block ~ ~ ~ candle[lit=true] run function julliot:main/timersetup/candle
+execute as @e[type=marker,tag=candle,tag=julliapi.touched] at @s run function julliot:timer/main with storage julliapi:timer

@@ -1,8 +1,8 @@
-data merge storage julli:setobj {index0:0}
-data merge storage julli:setobj {index1:1}
-data merge storage julli:setobj {index2:2}
+data merge storage julliapi:setobj {index0:0}
+data merge storage julliapi:setobj {index1:1}
+data merge storage julliapi:setobj {index2:2}
 
-scoreboard players set dummy setobjQuantity -1
+scoreboard players set dummy julliapi.setobjQuantity -1
 
 $execute as @e[type=marker,nbt=$(markernbt)] at @s if entity @s[tag=isBlock] run setblock ~ ~ ~ $(block)
 
