@@ -1,4 +1,4 @@
-tag @s add julliapi.timer.touched
+tag @s add julliapi.timer.triggered
 
 execute store result score @s julliapi.timerTicks run random value 80..120
 
