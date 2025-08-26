@@ -1,0 +1,1 @@
+scoreboard objectives add julliapi.lightLevel dummy

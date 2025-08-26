@@ -1,3 +1,3 @@
 tellraw @a {"text":"Reloaded!","color":"gray"}
 
-function julliot:setobj/init with storage julliapi:setobj
+function julliot:main/_init_all
