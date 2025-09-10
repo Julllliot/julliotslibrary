@@ -1,0 +1,1 @@
+$tellraw @a {"text":"<julliapi> distance between the two points: $(distance)"}

@@ -1,0 +1,1 @@
+$tellraw @a {"text":"<julliapi> squareroot of a: $(sqrt)"}
