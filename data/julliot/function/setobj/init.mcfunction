@@ -1,10 +1,12 @@
-data merge storage julliapi:setobj {index0:0}
-data merge storage julliapi:setobj {index1:1}
-data merge storage julliapi:setobj {index2:2}
+data modify storage julliapi:setobj index0 set value 0
+data modify storage julliapi:setobj index1 set value 1
+data modify storage julliapi:setobj index2 set value 2
+data modify storage julliapi:setobj marker_id set value 0
 
 scoreboard players set dummy julliapi.setobjQuantity -1
+scoreboard players set dummy julliapi.setobj.marker_id 0
 
-execute as @e[type=marker,tag=julliapi.setobj.marker.block] at @s run setblock ~ ~ ~ air
+execute as @e[type=marker,tag=so.marker.block] at @s run setblock ~ ~ ~ air
 
-kill @e[tag=julliapi.setobj.entity]
-kill @e[type=marker,tag=julliapi.setobj.marker]
+kill @e[tag=so.entity]
+kill @e[type=marker,tag=so.marker]

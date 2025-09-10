@@ -5,12 +5,15 @@ $data modify storage julliapi:setobj y set from storage julliapi:setobj xyz[$(in
 $data modify storage julliapi:setobj z set from storage julliapi:setobj xyz[$(index2)]
 
 function julliot:setobj/marker with storage julliapi:setobj
+#}
 
 scoreboard players remove dummy julliapi.setobjQuantity 1
-
 execute store result score dummy julliapi.setobjX run data get storage julliapi:setobj index0
 execute store result score dummy julliapi.setobjY run data get storage julliapi:setobj index1
 execute store result score dummy julliapi.setobjZ run data get storage julliapi:setobj index2
+
+scoreboard players add dummy julliapi.setobj.marker_id 1
+execute store result storage julliapi:setobj marker_id int 1 run scoreboard players get dummy julliapi.setobj.marker_id
 
 scoreboard players add dummy julliapi.setobjX 3
 scoreboard players add dummy julliapi.setobjY 3
