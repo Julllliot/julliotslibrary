@@ -1,3 +1,5 @@
+#   you need to run this first to sqrt function to work.
+
 $scoreboard players set a jam.n $(a)
 
 scoreboard players operation a jam.n *= 100 jam.n

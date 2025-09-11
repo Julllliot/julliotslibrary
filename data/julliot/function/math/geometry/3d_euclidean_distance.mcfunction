@@ -19,6 +19,7 @@ scoreboard players operation c jam.n *= c jam.n
 scoreboard players operation a jam.n += b jam.n
 scoreboard players operation a jam.n += c jam.n
 
+#   sqrt setup
 scoreboard players operation a jam.n *= 100 jam.n
 scoreboard players operation out jam.n = a jam.n
 scoreboard players set tmp jam.n 100

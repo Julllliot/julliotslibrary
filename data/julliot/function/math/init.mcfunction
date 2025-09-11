@@ -6,5 +6,3 @@ scoreboard players set e jam.n 0
 scoreboard players set f jam.n 0
 scoreboard players set out jam.n 0
 scoreboard players set tmp jam.n 0
-
-data merge storage julliapi:jam {midpoint:[0f,0f,0f],ccinsq:0}

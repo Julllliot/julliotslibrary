@@ -1,1 +1,0 @@
-$execute as @e[type=marker,nbt=$(markernbt),tag=!excluded,sort=$(sort),limit=$(limit)] at @s run summon $(entity) ~ ~ ~ $(entitynbt)

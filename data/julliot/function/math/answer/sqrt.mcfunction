@@ -1,1 +1,1 @@
-$tellraw @a {"text":"<julliapi> squareroot of a: $(sqrt)"}
+$tellraw @a[tag=debug_math] {"text":"<julliapi> squareroot of a: $(sqrt)"}
