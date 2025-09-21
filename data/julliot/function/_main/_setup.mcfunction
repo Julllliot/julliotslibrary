@@ -3,8 +3,7 @@ function julliot:setobj/setup
 function julliot:math/setup
 function julliot:chk_light_lvl/setup
 
-scoreboard objectives add julliapi.panic trigger
-scoreboard players set @a julliapi.panic 0
-scoreboard players enable @a julliapi.panic
+data merge storage julliapi:setobj {markernbt:"{}",block:"foo",entity:"bar",entitynbt:"{}"}
+data merge storage julliapi:jam {midpoint:[0f,0f,0f]}
 
-function julliot:_main/_init_all
+function julliot:_main/init_all

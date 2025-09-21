@@ -1,4 +1,5 @@
-execute if score dummy julliapi.setobjQuantity matches 0 run return run function julliot:setobj/object with storage julliapi:setobj
+execute if score dummy julliapi.setobjQuantity matches ..-1 run return 0
+execute if score dummy julliapi.setobjQuantity matches 0 run return run function julliot:setobj/set/obj with storage julliapi:setobj
 
 $data modify storage julliapi:setobj x set from storage julliapi:setobj xyz[$(index0)]
 $data modify storage julliapi:setobj y set from storage julliapi:setobj xyz[$(index1)]

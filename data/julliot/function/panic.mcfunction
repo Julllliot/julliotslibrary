@@ -5,6 +5,3 @@ kill @e[type=marker,tag=so.marker.entity]
 kill @e[type=marker,tag=so.marker.block]
 kill @e[tag=so.entity]
 kill @e[tag=so]
-
-scoreboard players set @a julliapi.panic 0
-scoreboard players enable @a julliapi.panic

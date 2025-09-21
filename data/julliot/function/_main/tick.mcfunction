@@ -1,1 +1,0 @@
-execute if entity @a[scores={julliapi.panic=1..}] run function julliot:_main/_panic
