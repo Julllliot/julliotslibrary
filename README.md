@@ -5,7 +5,7 @@ This datapack is made for 1.21.7 - 1.21.8. However, if there's a demand, I can p
 FIRSTESTLY, you'll need to setup all scoreboards and storages with the function julliot:_main/_setup for it to work.  
 To uninstall, use julliot:_main/_uninstall and then you can delete the zip in peace.
 
-In panic situations (whenever setobj spawns thousands of entities uncontrollably), use /trigger julliapi.panic to kill ALL entities with following tags: so, so.marker, so.marker.entity, so.marker.block and so.entity.
+In panic situations (whenever setobj spawns thousands of entities uncontrollably), use /function julliot:panic to kill ALL entities with following tags: so, so.marker, so.marker.entity, so.marker.block and so.entity.
 
 ## The tools
 
