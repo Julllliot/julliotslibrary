@@ -7,4 +7,4 @@ scoreboard objectives add julliapi.panic trigger
 scoreboard players set @a julliapi.panic 0
 scoreboard players enable @a julliapi.panic
 
-function julliot:main/_init_all
+function julliot:_main/_init_all
