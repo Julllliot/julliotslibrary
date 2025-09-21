@@ -1,1 +1,1 @@
-$tellraw @a[tag=debug_math] {"text":"<julliapi> distance between the two points: $(distance)"}
+$tellraw @a[tag=julliapi_debug] {"text":"<julliapi> distance between the two points: $(distance)"}

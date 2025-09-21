@@ -7,6 +7,7 @@ scoreboard objectives remove julliapi.setobjY
 scoreboard objectives remove julliapi.setobjZ
 scoreboard objectives remove julliapi.timerRepeat
 scoreboard objectives remove julliapi.timerTicks
+scoreboard objectives remove julliapi.panic
 
 data remove storage julliapi:jam distance
 data remove storage julliapi:jam ccinsq
