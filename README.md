@@ -24,7 +24,7 @@ Behaviour:
 
 All arguments must be stored in storage julliapi:setobj.  
 The necessary arguments must be setup before calling the main function.  
-The dummy's scoreboard julliapi.setobjQuantity must be setup before calling the main function. If you don't, the Setobj will spawn thousands of markers (I will fix this soon) (FIXED!! I think). Use /trigger julliapi.panic if needed.
+The dummy's scoreboard julliapi.setobjQuantity must be setup before calling the main function. If you don't, the Setobj will spawn thousands of markers (I will fix this soon) (FIXED!! I think). Use /function julliot:panic if needed.
 
 julliapi.setobjQuantity : means the desired number of markers. Must be exactly the number of coordinates put in xyz argument.
 
