@@ -21,13 +21,13 @@ Behaviour:
 - Only one entity/block per marker.
 
 **This tool needs setup for it to work.**  
-1. All arguments must be stored in storage julliapi:setobj.  
-  The necessary arguments must be setup before calling the main function.  
-  The dummy's scoreboard julliapi.setobjQuantity must be setup before calling the main function. If you don't, the Setobj will spawn thousands of markers (I will fix this soon) (FIXED!! I think). Use /trigger julliapi.panic if needed.
+All arguments must be stored in storage julliapi:setobj.  
+The necessary arguments must be setup before calling the main function.  
+The dummy's scoreboard julliapi.setobjQuantity must be setup before calling the main function. If you don't, the Setobj will spawn thousands of markers (I will fix this soon) (FIXED!! I think). Use /trigger julliapi.panic if needed.
 
-2. julliapi.setobjQuantity : means the desired number of markers. Must be exactly the number of coordinates put in xyz argument.
+julliapi.setobjQuantity : means the desired number of markers. Must be exactly the number of coordinates put in xyz argument.
 
-3. Then you call the main function: julliot:setobj/main with storage julliapi:setobj
+Then you call the main function: julliot:setobj/main with storage julliapi:setobj
 
 Arguments to merge in julliapi:setobj :
 - xyz : Necessary. the coordinates must be put in order inside the array, e.g.: [1,2,3, 4,5,6 ,7,8,9]
