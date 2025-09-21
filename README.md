@@ -31,11 +31,11 @@ julliapi.setobjQuantity : means the desired number of markers. Must be exactly t
 Then you call the main function: julliot:setobj/main with storage julliapi:setobj
 
 Arguments to merge in julliapi:setobj :
-- xyz : Necessary. the coordinates must be put in order inside the array, e.g.: [1,2,3, 4,5,6 ,7,8,9]
-- markernbt : Necessary. Must be in nbt structure, e.g.: {Tags:[\"foo\",\"bar\",\"so\"]}  
-- block : Not necessary. e.g.: "acacia_planks"
-- entity : Not necessary. e.g.: "bat"
-- entitynbt : Not necessary. Must be in nbt structure.
+- xyz : MUST. the coordinates must be put in order inside the array, e.g.: [1,2,3, 4,5,6 ,7,8,9]
+- markernbt : MUST. Must be in nbt structure and have at least one unique tag, e.g.: {Tags:[\"foo\",\"bar\",\"so\"]}  
+- block : OPTIONAL. e.g.: "acacia_planks"
+- entity : OPTIONAL. e.g.: "bat"
+- entitynbt : SHOULD. Must be in nbt structure.
 
    IMPORTANT NOTES:  
 You need to specify what type of marker it is in his tags: use "so.marker.block" for to setblock and/or "so.marker.entity" to summon.  
