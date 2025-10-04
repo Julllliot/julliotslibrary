@@ -1,1 +1,1 @@
-$tellraw @a[tag=julliapi_debug] {"text":"<julliapi> circumsphere radius: $(ccinsq)"}
+$tellraw @a[tag=julliapi_debug] {"text":"circumsphere radius: $(ccinsq)"}

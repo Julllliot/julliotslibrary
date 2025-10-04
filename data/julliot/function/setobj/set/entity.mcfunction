@@ -1,2 +1,2 @@
 $summon $(entity) ~ ~1 ~ $(entitynbt)
-$tag @n[type=$(entity)] add so.entity
+$tag @e[type=$(entity),nbt=$(entitynbt),y=1,distance=...1] add so.entity

@@ -1,10 +1,6 @@
-scoreboard objectives remove jam.n
+scoreboard objectives remove julliapi
+scoreboard objectives remove n
 scoreboard objectives remove julliapi.lightLvl
-scoreboard objectives remove julliapi.setobj.marker_id
-scoreboard objectives remove julliapi.setobjQuantity
-scoreboard objectives remove julliapi.setobjX
-scoreboard objectives remove julliapi.setobjY
-scoreboard objectives remove julliapi.setobjZ
 scoreboard objectives remove julliapi.timerRepeat
 scoreboard objectives remove julliapi.timerTicks
 

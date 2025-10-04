@@ -1,1 +1,1 @@
-$tellraw @a[tag=julliapi_debug] {"text":"<julliapi> the two given points midpoint: $(midpoint)"}
+$tellraw @a[tag=julliapi_debug] {"text":"$(midpoint)"}

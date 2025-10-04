@@ -1,31 +1,31 @@
-$scoreboard players set a jam.n $(a)
-$scoreboard players set b jam.n $(b)
-$scoreboard players set c jam.n $(c)
-$scoreboard players set d jam.n $(d)
-$scoreboard players set e jam.n $(e)
-$scoreboard players set f jam.n $(f)
+$scoreboard players set $a n $(a)
+$scoreboard players set $b n $(b)
+$scoreboard players set $c n $(c)
+$scoreboard players set $d n $(d)
+$scoreboard players set $e n $(e)
+$scoreboard players set $f n $(f)
 
 #(x2 - x1)^2 + (y2 - y1)^2 + (x2 - x1)^2
 
-scoreboard players operation a jam.n -= d jam.n
-scoreboard players operation a jam.n *= a jam.n
+scoreboard players operation $a n -= $d n
+scoreboard players operation $a n *= $a n
 
-scoreboard players operation b jam.n -= e jam.n
-scoreboard players operation b jam.n *= b jam.n
+scoreboard players operation $b n -= $e n
+scoreboard players operation $b n *= $b n
 
-scoreboard players operation c jam.n -= f jam.n
-scoreboard players operation c jam.n *= c jam.n
+scoreboard players operation $c n -= $f n
+scoreboard players operation $c n *= $c n
 
-scoreboard players operation a jam.n += b jam.n
-scoreboard players operation a jam.n += c jam.n
+scoreboard players operation $a n += $b n
+scoreboard players operation $a n += $c n
 
 #   sqrt setup
-scoreboard players operation a jam.n *= 100 jam.n
-scoreboard players operation out jam.n = a jam.n
-scoreboard players set tmp jam.n 100
+scoreboard players operation $out n = $a n
+scoreboard players operation $out n *= 100 n
+scoreboard players set $tmp n 100
 
 function julliot:math/algebra/sqrt
 
-execute store result storage julliapi:jam distance double 0.1 run scoreboard players get out jam.n
+execute store result storage julliapi:jam distance double 0.1 run scoreboard players get $out n
 
 function julliot:math/answer/3d_euclidean_distance with storage julliapi:jam

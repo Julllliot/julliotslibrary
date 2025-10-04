@@ -1,9 +1,7 @@
-#   you need to run this first to sqrt function to work.
+$scoreboard players set $a n $(a)
 
-$scoreboard players set a jam.n $(a)
-
-scoreboard players operation a jam.n *= 100 jam.n
-scoreboard players operation out jam.n = a jam.n
-scoreboard players set tmp jam.n 100
+scoreboard players operation $out n = $a n
+scoreboard players operation $out n *= #100 n
+scoreboard players set $tmp n 100
 
 function julliot:math/algebra/sqrt
