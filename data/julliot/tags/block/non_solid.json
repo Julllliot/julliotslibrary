@@ -1,0 +1,33 @@
+{
+  "replace": false,
+  "values": [
+    "#banners",
+    "#buttons",
+    "#climbable",
+    "#crops",
+    "#cave_vines",
+    "#candles",
+    "#doors",
+    "#fall_damage_resetting",
+    "#flower_pots",
+    "#flowers",
+    "#impermeable",
+    "#inside_step_sound_blocks",
+    "#leaves",
+    "#mineable/hoe",
+    "#pressure_plates",
+    "#replaceable",
+    "#replaceable_by_trees",
+    "#replaceable_by_mushrooms",
+    "#signs",
+    "#snow",
+    "#trapdoors",
+    "#wool_carpets",
+    "chain",
+    "lightning_rod",
+    "moss_carpet",
+    "pale_hanging_moss",
+    "pale_moss_carpet",
+    "pointed_dripstone"
+  ]
+}

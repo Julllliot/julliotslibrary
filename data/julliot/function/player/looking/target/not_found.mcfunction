@@ -1,0 +1,1 @@
+$scoreboard players set $(player_selector) julliapi.raycastHit 0

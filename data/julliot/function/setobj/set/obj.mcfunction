@@ -7,4 +7,4 @@ scoreboard players set $setobj.quantity julliapi -1
 scoreboard players set $setobj.markerID julliapi 0
 
 $execute as @e[type=marker,nbt=$(markernbt),tag=so.marker.block] at @s run function julliot:setobj/set/block with storage julliapi:setobj
-$execute as @e[type=marker,nbt=$(markernbt),tag=so.marker.entity] at @s run function julliot:setobj/set/entity with storage julliapi:setobj
+$execute as @e[type=marker,nbt=$(markernbt),tag=so.marker.entity] at @s positioned ~ ~1 ~ run function julliot:setobj/set/entity with storage julliapi:setobj
