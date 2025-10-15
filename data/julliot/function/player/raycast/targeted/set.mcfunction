@@ -1,9 +1,21 @@
-# Arguments
+## Arguments
 
-# execute this as @a[limit=1] at @s anchored eyes positioned ^ ^ ^
-# Macros: max_distance
 # the target entity MUST have "ray.target" tag
 
-#tag @s add ray.caster
-summon area_effect_cloud ~ ~ ~ {Tags:["so.entity","so.marker","ray"],NoGravity:1b,Radius:0f}
-$execute as @n[type=area_effect_cloud,tag=ray,distance=..1] run function julliot:player/raycast/targeted/aim_target with storage julliapi:player looking.$(temp)
+$execute unless entity $(target_selector) run return fail
+
+#center
+$scoreboard players set @s julliapi.raycastDistance $(ray_length)
+$execute anchored feet facing entity $(target_selector) feet positioned ^ ^$(target_center) ^ run function julliot:player/raycast/targeted/loop with storage julliapi:player looking.$(temp)
+
+$execute if score $(player_selector) julliapi.raycastHit matches 1 run return 0
+
+#feet
+$scoreboard players set @s julliapi.raycastDistance $(ray_length)
+$execute anchored eyes facing entity $(target_selector) feet positioned ^ ^ ^ run function julliot:player/raycast/targeted/loop with storage julliapi:player looking.$(temp)
+
+$execute if score $(player_selector) julliapi.raycastHit matches 1 run return 0
+
+#eyes
+$scoreboard players set @s julliapi.raycastDistance $(ray_length)
+$execute anchored eyes facing entity $(target_selector) eyes positioned ^ ^ ^ run function julliot:player/raycast/targeted/loop with storage julliapi:player looking.$(temp)

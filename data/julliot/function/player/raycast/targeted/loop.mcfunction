@@ -1,4 +1,4 @@
-#particle bubble ~ ~ ~ 0 0 0 0 1
+#particle dust{color:[1,0,0],scale:0.4} ~ ~ ~ 0 0 0 0 1 normal
 
 $execute as $(target_selector) positioned ~-.99 ~-.99 ~-.99 if entity @s[tag=ray.target,dx=0] run return run scoreboard players set $(player_selector) julliapi.raycastHit 1
 

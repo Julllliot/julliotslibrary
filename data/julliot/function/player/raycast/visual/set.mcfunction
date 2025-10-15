@@ -4,13 +4,14 @@
 # Macros: max_distance
 # the target entity MUST have "ray.target" tag
 
-$scoreboard players set $(player_selector) julliapi.raycastDistance $(ray_length)
-$execute as $(player_selector) at @s anchored feet facing entity $(target_selector) feet positioned ^ ^$(target_center) ^ if entity $(target_selector) run function julliot:player/raycast/default/vec with storage julliapi:player looking.$(temp)
-
-$scoreboard players set $(player_selector) julliapi.raycastDistance 6
-$execute as $(player_selector) at @s anchored feet facing entity $(target_selector) feet positioned ^ ^$(target_center) ^2 if entity $(target_selector) run function julliot:player/raycast/default/vec2 with storage julliapi:player looking.$(temp)
+$execute unless entity $(target_selector) run return fail
 
 $scoreboard players set $(player_selector) julliapi.raycastDistance $(ray_length)
-$execute as $(player_selector) at @s anchored feet facing entity $(target_selector) feet positioned ^ ^$(target_center) ^2 positioned ~ ~-$(target_center) ~ rotated as @s positioned ^ ^ ^-2 if entity $(target_selector) run function julliot:player/raycast/default/vec3 with storage julliapi:player looking.$(temp)
+
+$execute facing entity $(target_selector) feet positioned ^$(cos) ^$(sin) ^$(zed) positioned ~ ~-.05 ~ run function julliot:player/raycast/visual/vec with storage julliapi:player raycast.$(temp)
+
+$scoreboard players set $(player_selector) julliapi.raycastDistance $(ray_length)
+
+$execute facing entity $(target_selector) feet positioned ^$(cos) ^$(sin) ^$(zed) positioned ~ ~-.05 ~ positioned ^ ^ ^2 rotated as @s run function julliot:player/raycast/visual/vec2 with storage julliapi:player raycast.$(temp)
 
 scoreboard players reset @s julliapi.raycastDistance
