@@ -10,6 +10,6 @@ $data merge storage julliapi:player {\
   }\
 }
 
-$function julliot:player/raycast/targeted/set with storage julliapi:player raycast.$(temp)
+$execute as $(player_selector) at @s run function julliot:player/raycast/targeted/set with storage julliapi:player raycast.$(temp)
 
 $data remove storage julliapi:player raycast.$(temp)

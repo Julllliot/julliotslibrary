@@ -10,9 +10,6 @@ $data merge storage julliapi:player {\
       target_selector:"$(target_selector)",\
       target_center:"$(target_center)",\
       ray_length:$(ray_length),\
-      precision_center:$(precision_center),\
-      precision_medium:$(precision_medium),\
-      precision_corner:$(precision_corner),\
       temp:"$(temp)"\
     }\
   }\

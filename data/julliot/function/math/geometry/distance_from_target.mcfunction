@@ -1,9 +1,9 @@
-$execute store result score $player_x n run data get entity $(player_selector) Pos[0]
-$execute store result score $player_y n run data get entity $(player_selector) Pos[1]
-$execute store result score $player_z n run data get entity $(player_selector) Pos[2]
-execute store result score $target_x n run data get entity @s Pos[0]
-execute store result score $target_y n run data get entity @s Pos[1]
-execute store result score $target_z n run data get entity @s Pos[2]
+$execute store result score $player_x n run data get entity $(player_selector) Pos[0] 100
+$execute store result score $player_y n run data get entity $(player_selector) Pos[1] 100
+$execute store result score $player_z n run data get entity $(player_selector) Pos[2] 100
+execute store result score $target_x n run data get entity @s Pos[0] 100
+execute store result score $target_y n run data get entity @s Pos[1] 100
+execute store result score $target_z n run data get entity @s Pos[2] 100
 
 scoreboard players operation $player_x n -= $target_x n
 scoreboard players operation $player_x n *= $player_x n
@@ -20,7 +20,6 @@ scoreboard players operation $player_x n += $player_z n
 
 #   sqrt setup
 scoreboard players operation $out n = $player_x n
-scoreboard players operation $out n *= #100 n
 scoreboard players set $tmp n 100
 
 function julliot:math/algebra/sqrt
