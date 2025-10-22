@@ -5,7 +5,7 @@ scoreboard players set #100 n 100
 scoreboard players set #1000 n 1000
 scoreboard players set #10000 n 10000
 
-# contants used in player/looking/precision functions in 1:100 scale
+# contants used in player/looking/precision functions in 100:1 scale
 scoreboard players set #0.75 n 075
 scoreboard players set #0.89 n 089
 scoreboard players set #0.94 n 094
