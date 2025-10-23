@@ -1,11 +1,3 @@
-data modify storage julliapi:setobj index0 set value 0
-data modify storage julliapi:setobj index1 set value 1
-data modify storage julliapi:setobj index2 set value 2
-data modify storage julliapi:setobj marker_id set value 0
-
-scoreboard players set $setobj.quantity julliapi -1
-scoreboard players set $setobj.markerID julliapi 0
-
 execute as @e[type=marker,tag=so.marker.block] at @s run setblock ~ ~ ~ air
 
 kill @e[tag=so.entity]

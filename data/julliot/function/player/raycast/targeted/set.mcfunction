@@ -12,10 +12,10 @@ execute if score @s julliapi.raycastHit matches 1 run return 0
 
 #feet
 $scoreboard players set @s julliapi.raycastDistance $(ray_length)
-$execute anchored eyes facing entity $(target_selector) feet positioned ^ ^ ^ run function julliot:player/raycast/targeted/loop with storage julliapi:player looking.$(temp)
+$execute anchored eyes facing entity $(target_selector) feet run function julliot:player/raycast/targeted/loop with storage julliapi:player looking.$(temp)
 
 execute if score @s julliapi.raycastHit matches 1 run return 0
 
 #eyes
 $scoreboard players set @s julliapi.raycastDistance $(ray_length)
-$execute anchored eyes facing entity $(target_selector) eyes positioned ^ ^ ^ run function julliot:player/raycast/targeted/loop with storage julliapi:player looking.$(temp)
+$execute anchored eyes facing entity $(target_selector) eyes run function julliot:player/raycast/targeted/loop with storage julliapi:player looking.$(temp)

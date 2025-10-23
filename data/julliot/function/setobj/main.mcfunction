@@ -1,26 +1,39 @@
-execute if score $setobj.quantity julliapi matches ..-1 run return 0
-execute if score $setobj.quantity julliapi matches 0 run return run function julliot:setobj/set/obj with storage julliapi:setobj
+# ## Places blocks and/or summons entities of the same type and saves all the spawn positions with markers. All unloads when reloading in-game
+#
+# @context any
+# @macros
+#   markernbt: "{Tags:['foo']}" string
+#   xyz: [x1,y1,z1, x2,y2,z2, ... xn,yn,zn] int
+#   quantity: n int
+#   block: string
+#   entity: string
+#   entitynbt: "{NoAI:1}" string
+#   temp: string
 
-$data modify storage julliapi:setobj x set from storage julliapi:setobj xyz[$(index0)]
-$data modify storage julliapi:setobj y set from storage julliapi:setobj xyz[$(index1)]
-$data modify storage julliapi:setobj z set from storage julliapi:setobj xyz[$(index2)]
+$data merge storage julliapi:setobj {\
+  macros: {\
+    $(temp): {\
+      xyz:$(xyz),\
+      markernbt:'$(markernbt)',\
+      block:'$(block)',\
+      entity:'$(entity)',\
+      entitynbt:'$(entitynbt)',\
+      temp:'$(temp)'\
+    }\
+  }\
+}
 
-function julliot:setobj/marker with storage julliapi:setobj
+$data modify storage julliapi:setobj macros.$(temp).index0 set value 0
+$data modify storage julliapi:setobj macros.$(temp).index1 set value 1
+$data modify storage julliapi:setobj macros.$(temp).index2 set value 2
+$data modify storage julliapi:setobj macros.$(temp).marker_id set value 0
 
-scoreboard players remove $setobj.quantity julliapi 1
-execute store result score $setobj.x julliapi run data get storage julliapi:setobj index0
-execute store result score $setobj.y julliapi run data get storage julliapi:setobj index1
-execute store result score $setobj.z julliapi run data get storage julliapi:setobj index2
+$scoreboard players set $setobj.quantity julliapi $(quantity)
 
-scoreboard players add $setobj.x julliapi 3
-scoreboard players add $setobj.y julliapi 3
-scoreboard players add $setobj.z julliapi 3
+scoreboard players set $setobj.x julliapi 0
+scoreboard players set $setobj.y julliapi 1
+scoreboard players set $setobj.z julliapi 2
 
-execute store result storage julliapi:setobj index0 int 1 run scoreboard players get $setobj.x julliapi
-execute store result storage julliapi:setobj index1 int 1 run scoreboard players get $setobj.y julliapi
-execute store result storage julliapi:setobj index2 int 1 run scoreboard players get $setobj.z julliapi
+$function julliot:setobj/index with storage julliapi:setobj macros.$(temp)
 
-scoreboard players add $setobj.markerID julliapi 1
-execute store result storage julliapi:setobj marker_id int 1 run scoreboard players get $setobj.markerID julliapi
-
-function julliot:setobj/main with storage julliapi:setobj
+$data remove storage julliapi:setobj macros.$(temp)
