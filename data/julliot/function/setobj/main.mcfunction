@@ -23,13 +23,14 @@ $data merge storage julliapi:setobj {\
   }\
 }
 
+$scoreboard players set $setobj.quantity julliapi $(quantity)
+
+$data modify storage julliapi:setobj macros.$(temp).marker_id set value 0
 $data modify storage julliapi:setobj macros.$(temp).index0 set value 0
 $data modify storage julliapi:setobj macros.$(temp).index1 set value 1
 $data modify storage julliapi:setobj macros.$(temp).index2 set value 2
-$data modify storage julliapi:setobj macros.$(temp).marker_id set value 0
 
-$scoreboard players set $setobj.quantity julliapi $(quantity)
-
+scoreboard players set $setobj.markerID julliapi 0
 scoreboard players set $setobj.x julliapi 0
 scoreboard players set $setobj.y julliapi 1
 scoreboard players set $setobj.z julliapi 2
