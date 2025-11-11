@@ -18,5 +18,7 @@ data remove storage julliapi:setobj macros
 data remove storage julliapi:player looking
 data remove storage julliapi:player raycast
 
+data remove storage julliapi:timer args
+
 tellraw @a {"text":"<julliapi> Scoreboards and storages removed. You are now safe to unistall the datapack!"}
 tellraw @a {"text":"<julliapi> If you want to remove all entities and blocks created by this pack, run julliot:main/_remove_all."}

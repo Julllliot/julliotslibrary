@@ -1,15 +1,29 @@
-#must execute as target entity; and optional at @s
+# ## creates a scoreboard timer to the target entity, repeats timer n times and returns a tag when over
+#
+# @context any entity
+# @macros
+#   ticks: int
+#   repeat: int
+#   temp: string
+# @output
+#   tag @s julliapi.timer.end when repeat = 0 && ticks = 0
 
-$execute if entity @s[tag=!julliapi.timer.triggered,tag=!julliapi.timer.end] run data merge storage julliapi:timer \
+execute if entity @s[tag=julliapi.timer.end] run return fail
+
+$execute if data storage julliapi:timer args.$(temp) if entity @s[tag=julliapi.timer.running] run return run function julliot:timer/loop with storage julliapi:timer args.$(temp)
+
+$execute unless data storage julliapi:timer args.$(temp) run data merge storage julliapi:timer \
 {\
-    $(temp_memory):\
-    {\
-        store_ticks_get:$(store_ticks_get),\
-        exe_timer_loop_args:$(exe_timer_loop_args),\
-        temp_memory_pointer:$(temp_memory) \
+    args:{\
+        $(temp):{\
+            ticks:$(ticks),\
+            repeat:$(repeat),\
+	    custom_cmd:'$(custom_cmd)',\
+            temp:'$(temp)'\
+        }\
     }\
 }
 
-$execute if entity @s[tag=!julliapi.timer.triggered,tag=!julliapi.timer.end] run function julliot:timer/set_scores {store_ticks_get:$(store_ticks_get),exe_repeat_args:$(exe_repeat_args),repeat:$(repeat)}
+$function julliot:timer/set_scores with storage julliapi:timer args.$(temp)
 
-$execute if entity @s[tag=julliapi.timer.triggered,tag=!julliapi.timer.end] run function julliot:timer/loop with storage julliapi:timer $(temp_memory_pointer)
+$function julliot:timer/loop with storage julliapi:timer args.$(temp)
