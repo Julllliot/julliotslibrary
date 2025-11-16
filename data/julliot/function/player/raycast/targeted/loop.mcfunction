@@ -4,6 +4,6 @@ $execute as $(target_selector) positioned ~-.99 ~-.99 ~-.99 if entity @s[tag=ray
 
 scoreboard players remove @s julliapi.raycastDistance 1
 
-$execute if score @s julliapi.raycastDistance matches 1.. if block ~ ~ ~ #julliot:non_solid unless block ~ ~ ~ #julliot:exceptions positioned ^ ^ ^.25 run return run function julliot:player/raycast/targeted/loop with storage julliapi:player looking.$(temp)
+$execute if score @s julliapi.raycastDistance matches 1.. if block ~ ~ ~ #julliot:non_solid unless block ~ ~ ~ #julliot:exceptions $(ray_args)positioned ^ ^ ^.25 run return run function julliot:player/raycast/targeted/loop with storage julliapi:player looking.$(temp)
 
 scoreboard players set @s julliapi.raycastHit 0

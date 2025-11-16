@@ -5,6 +5,7 @@ $data merge storage julliapi:player {\
       target_selector:'$(target_selector)',\
       target_center:'$(target_center)',\
       ray_length:$(ray_length),\
+      ray_args:'$(ray_args)',\
       temp:'$(temp)'\
     }\
   }\
