@@ -2,10 +2,10 @@
 
 This datapack is made for 1.21.7 - 1.21.8. However, if there's a demand, I can port it to newer or older versions.
 
-FIRSTESTLY, you'll need to setup all scoreboards and storages with the function julliot:_main/_setup for it to work.  
-To uninstall, use julliot:_main/_uninstall and then you can delete the zip in peace.
+FIRSTESTLY, you'll need to setup all scoreboards and storages with the function julliapi:_main/_setup for it to work.  
+To uninstall, use julliapi:_main/_uninstall and then you can delete the zip in peace.
 
-In panic situations (whenever setobj spawns thousands of entities uncontrollably), use /function julliot:panic to kill ALL entities with following tags: so, so.marker, so.marker.entity, so.marker.block and so.entity.
+In panic situations (whenever setobj spawns thousands of entities uncontrollably), use /function julliapi:panic to kill ALL entities with following tags: so, so.marker, so.marker.entity, so.marker.block and so.entity.
 
 ## The tools
 
@@ -24,11 +24,11 @@ Behaviour:
 
 All arguments must be stored in storage julliapi:setobj.  
 The necessary arguments must be setup before calling the main function.  
-The dummy's scoreboard julliapi.setobjQuantity must be setup before calling the main function. If you don't, the Setobj will spawn thousands of markers (I will fix this soon) (FIXED!! I think). Use /function julliot:panic if needed.
+The dummy's scoreboard julliapi.setobjQuantity must be setup before calling the main function. If you don't, the Setobj will spawn thousands of markers (I will fix this soon) (FIXED!! I think). Use /function julliapi:panic if needed.
 
 julliapi.setobjQuantity : means the desired number of markers. Must be exactly the number of coordinates put in xyz argument.
 
-Then you call the main function: julliot:setobj/main with storage julliapi:setobj
+Then you call the main function: julliapi:setobj/main with storage julliapi:setobj
 
 Arguments to merge in julliapi:setobj :
 - xyz : MUST. the coordinates must be put in order inside the array, e.g.: [1,2,3, 4,5,6 ,7,8,9]
@@ -47,16 +47,16 @@ It is advised to add your custom tag and the tag "so" for generic identification
  ```
  data merge storage julliapi:setobj {xyz:[16,3,-3, 7,3,-2, 3,3,0, 9,3,8, 3,3,11, -3,3,7, -1,3,16, -3,3,24, 4,3,28], markernbt:"{Tags:[\"so\",\"candle\",\"so.marker.block\",\"so.marker.entity\"]}",block:"candle[lit=true]",entity:"bat",entitynbt:"{Tags:["so","batman"],NoAI:1b}"}
 scoreboard players set dummy julliapi.setobjQuantity 9
-function julliot:setobj/main with storage julliapi:setobj
+function julliapi:setobj/main with storage julliapi:setobj
  ```
 
 ### Chk_light_lvl
 
 To return the value of the light level of the target entity's julliapi.lightLvl scoreboard. You can call this function as frequently as you like with schedule function!
 
-Execute the main function julliot:chk_light_lvl/main as the desired target entity.
+Execute the main function julliapi:chk_light_lvl/main as the desired target entity.
 
 Example:
 ```
-execute as @a[tag=foo] run julliot:chk_light_lvl/main
+execute as @a[tag=foo] run julliapi:chk_light_lvl/main
 ```

@@ -1,2 +1,0 @@
-$execute as @e[type=marker,nbt=$(markernbt),tag=so.marker.block] at @s run function julliot:setobj/set/block with storage julliapi:setobj macros.$(temp)
-$execute as @e[type=marker,nbt=$(markernbt),tag=so.marker.entity] at @s positioned ~ ~1 ~ run function julliot:setobj/set/entity with storage julliapi:setobj macros.$(temp)
